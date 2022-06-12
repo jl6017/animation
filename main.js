@@ -3,9 +3,9 @@ const canvas = document.querySelector(".animation-cubes");
 const context = canvas.getContext("2d");
 
 
-const frameCount = 500;
+const frameCount = 100;
 const currentFrame = index => (
-  `./img/ani${index.toString().padStart(4, '0')}.png`
+  `./image/ani${index.toString().padStart(4, '0')}.png`
 )
 
 const preloadImages = () => {
