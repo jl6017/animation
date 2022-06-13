@@ -8,12 +8,12 @@ const currentFrame = index => (
   `./image/${index.toString().padStart(4, '0')}.png`
 )
 
-const preloadImages = () => {
-  for (let i = 1; i < frameCount; i++) {
-    const img = new Image();
-    img.src = currentFrame(i);
-  }
-};
+// const preloadImages = () => {
+//   for (let i = 1; i < frameCount; i++) {
+//     const img = new Image();
+//     img.src = currentFrame(i);
+//   }
+// };
 
 const img = new Image()
 img.src = currentFrame(1);
@@ -42,4 +42,4 @@ window.addEventListener('scroll', () => {
   requestAnimationFrame(() => updateImage(frameIndex + 1))
 });
 
-preloadImages()
+// preloadImages()
