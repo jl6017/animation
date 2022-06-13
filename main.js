@@ -5,7 +5,7 @@ const context = canvas.getContext("2d");
 
 const frameCount = 100;
 const currentFrame = index => (
-  `./image/ani${index.toString().padStart(4, '0')}.png`
+  `./image/${index.toString().padStart(4, '0')}.png`
 )
 
 const preloadImages = () => {
@@ -17,8 +17,8 @@ const preloadImages = () => {
 
 const img = new Image()
 img.src = currentFrame(1);
-canvas.width=1920;
-canvas.height=1440;
+canvas.width=1440;
+canvas.height=1080;
 
 img.onload=function(){
   context.drawImage(img, 0, 0);
